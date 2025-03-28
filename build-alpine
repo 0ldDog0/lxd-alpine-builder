@@ -71,7 +71,7 @@ get_static_apk () {
         echo "ERROR: checksum is missing for $keyname"
         return 1
     fi
-    (cd $rootfs/etc/apk/keys && echo "$checksum" | sha256sum -c -) || return 1```
+    (cd $rootfs/etc/apk/keys && echo "$checksum" | sha256sum -c -) || return 1
 
     # verify the static apk binary signature
     APK=$rootfs/sbin/apk.static
